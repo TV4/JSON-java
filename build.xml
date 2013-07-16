@@ -11,7 +11,11 @@
     </target>
 
     <target name="compile" depends="-init" description="Compiles files to bin/classes">
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false"/>
+        <javac srcdir="${src.dir}"
+               destdir="${classes.dir}"
+               includeantruntime="false"
+                target="1.6"
+                source="1.6"/>
     </target>
 
     <target name="jar" depends="compile" description="creates json-org.jar">
